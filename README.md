@@ -1,5 +1,9 @@
 # Internet Data Package E-Commerce
 
+> **📅 Availability Window**
+> 
+> **Start from 17:00 on 02 February 2026 until 23:10 on 02 February 2026** (24-hour format, GMT+7)
+
 A modern, responsive e-commerce platform for purchasing internet data packages, built with React, Vite, and Tailwind CSS.
 
 ## Features
