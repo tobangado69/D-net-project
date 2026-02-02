@@ -8,11 +8,13 @@ A modern, responsive e-commerce platform for purchasing internet data packages, 
 
 ## Features
 
-- **Modern UI/UX** - Clean, responsive design with Tailwind CSS v4
+- **Modern UI/UX** - Clean, responsive design with Tailwind CSS v3
 - **Package Catalog** - Browse 19 different data packages with filtering and sorting
 - **Secure Checkout** - Phone line selection and order confirmation
 - **Transaction History** - View past purchases with reorder functionality
-- **Account Management** - Manage phone lines and profile
+- **Account Management** - Manage phone lines and profile with full CRUD support
+- **Profile Updates** - Edit customer name and email
+- **Phone Line Management** - Add new lines and change status (active/inactive)
 - **Mock API** - json-server for rapid development without backend
 
 ## Tech Stack
@@ -120,13 +122,44 @@ Login → Account → View Phone Lines → Browse Packages → Purchase
 | Endpoint | Method | Description |
 |----------|--------|-------------|
 | `/auth/login` | POST | Dummy login (demo/demo) |
-| `/customers/:id` | GET | Get customer profile |
+| `/customers?id=:id` | GET | Get customer profile |
+| `/customers/:id` | PATCH | Update customer profile (name, email) |
 | `/phoneLines?customerId=:id` | GET | Get customer's phone lines |
 | `/phoneLines` | POST | Add new phone line |
+| `/phoneLines/:id` | PATCH | Update phone line status (active/inactive) |
+| `/phoneLines/:id` | DELETE | Delete phone line |
 | `/packages` | GET | Get all packages |
 | `/packages/:id` | GET | Get package details |
 | `/transactions?customerId=:id` | GET | Get transactions |
 | `/transactions` | POST | Create transaction |
+
+## CRUD Operations
+
+This application implements full CRUD (Create, Read, Update, Delete) operations:
+
+### Customer
+- **Create**: N/A (pre-seeded demo user)
+- **Read**: View customer profile on Account page
+- **Update**: Edit name and email via "Ubah Profil" modal
+- **Delete**: N/A
+
+### Phone Line
+- **Create**: Add new phone number via "+ Tambah" button
+- **Read**: View all phone lines on Account page
+- **Update**: Change status (Aktif/Tidak Aktif) via dropdown
+- **Delete**: Delete phone number via trash icon with confirmation modal
+
+### Package
+- **Create**: N/A (static catalog)
+- **Read**: Browse catalog, view package details
+- **Update**: N/A
+- **Delete**: N/A
+
+### Transaction
+- **Create**: Purchase package via checkout flow
+- **Read**: View transaction history
+- **Update**: N/A
+- **Delete**: N/A
 
 ## Development
 

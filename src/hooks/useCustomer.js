@@ -1,11 +1,13 @@
 import { useState, useCallback } from 'react'
 import { useFetch } from './useFetch'
 import { useAuth } from '../context/AuthContext'
-import { getCustomer, getPhoneLines, addPhoneLine as addPhoneLineService } from '../services/customerService'
+import { getCustomer, getPhoneLines, addPhoneLine as addPhoneLineService, updateCustomer as updateCustomerService, updatePhoneLine as updatePhoneLineService, deletePhoneLine as deletePhoneLineService } from '../services/customerService'
 
 export function useCustomer() {
   const { customer } = useAuth()
   const [phoneLinesLoading, setPhoneLinesLoading] = useState(false)
+  const [updateLoading, setUpdateLoading] = useState(false)
+  const [updateError, setUpdateError] = useState(null)
 
   const { data: customerData, loading: customerLoading, error: customerError, refetch: refetchCustomer } = useFetch(
     () => customer ? getCustomer(customer.id) : Promise.resolve(null),
@@ -35,6 +37,48 @@ export function useCustomer() {
     }
   }, [customer, refetchPhoneLines])
 
+  const updateCustomer = useCallback(async (data) => {
+    if (!customer) throw new Error('Not authenticated')
+    
+    setUpdateLoading(true)
+    setUpdateError(null)
+    try {
+      const updated = await updateCustomerService(customer.id, data)
+      refetchCustomer()
+      return updated
+    } catch (err) {
+      setUpdateError(err.message)
+      throw err
+    } finally {
+      setUpdateLoading(false)
+    }
+  }, [customer, refetchCustomer])
+
+  const updatePhoneLine = useCallback(async (lineId, data) => {
+    if (!customer) throw new Error('Not authenticated')
+    
+    setPhoneLinesLoading(true)
+    try {
+      const updated = await updatePhoneLineService(lineId, data)
+      refetchPhoneLines()
+      return updated
+    } finally {
+      setPhoneLinesLoading(false)
+    }
+  }, [customer, refetchPhoneLines])
+
+  const deletePhoneLine = useCallback(async (lineId) => {
+    if (!customer) throw new Error('Not authenticated')
+    
+    setPhoneLinesLoading(true)
+    try {
+      await deletePhoneLineService(lineId)
+      refetchPhoneLines()
+    } finally {
+      setPhoneLinesLoading(false)
+    }
+  }, [customer, refetchPhoneLines])
+
   const refetch = useCallback(() => {
     refetchCustomer()
     refetchPhoneLines()
@@ -44,8 +88,12 @@ export function useCustomer() {
     customer: customerData,
     phoneLines: phoneLines || [],
     loading: customerLoading || phoneLinesLoadingFetch || phoneLinesLoading,
-    error: customerError || phoneLinesError,
+    error: customerError || phoneLinesError || updateError,
     addPhoneLine,
+    updateCustomer,
+    updatePhoneLine,
+    deletePhoneLine,
+    updateLoading,
     refetch
   }
 }

@@ -1,7 +1,7 @@
 {
   "customers": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Demo User",
       "email": "demo@example.com",
       "registrationDate": "2024-01-15T10:00:00Z",
@@ -10,24 +10,17 @@
   ],
   "phoneLines": [
     {
-      "id": 1,
+      "id": "1",
       "customerId": 1,
       "phoneNumber": "+6287812345678",
       "status": "active",
       "lastPurchaseDate": "2025-01-10T14:00:00Z"
     },
     {
-      "id": 2,
-      "customerId": 1,
-      "phoneNumber": "+6287812345679",
-      "status": "active",
-      "lastPurchaseDate": "2025-01-05T10:30:00Z"
-    },
-    {
-      "id": 3,
+      "id": "3",
       "customerId": 1,
       "phoneNumber": "+6287812345680",
-      "status": "inactive",
+      "status": "active",
       "lastPurchaseDate": "2024-12-15T16:45:00Z"
     }
   ],
