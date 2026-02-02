@@ -1,0 +1,448 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Demo User",
+      "email": "demo@example.com",
+      "registrationDate": "2024-01-15T10:00:00Z",
+      "status": "active"
+    }
+  ],
+  "phoneLines": [
+    {
+      "id": 1,
+      "customerId": 1,
+      "phoneNumber": "+6287812345678",
+      "status": "active",
+      "lastPurchaseDate": "2025-01-10T14:00:00Z"
+    },
+    {
+      "id": 2,
+      "customerId": 1,
+      "phoneNumber": "+6287812345679",
+      "status": "active",
+      "lastPurchaseDate": "2025-01-05T10:30:00Z"
+    },
+    {
+      "id": 3,
+      "customerId": 1,
+      "phoneNumber": "+6287812345680",
+      "status": "inactive",
+      "lastPurchaseDate": "2024-12-15T16:45:00Z"
+    }
+  ],
+  "packages": [
+    {
+      "id": "1",
+      "name": "Starter 1GB",
+      "dataQuota": 1,
+      "validityDays": 7,
+      "price": 9999,
+      "category": "starter",
+      "description": "Perfect for light browsing and messaging",
+      "features": [
+        "1GB high-speed data",
+        "4G LTE network",
+        "Social media access",
+        "Valid for 7 days",
+        "Basic streaming quality"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Starter 2GB",
+      "dataQuota": 2,
+      "validityDays": 7,
+      "price": 15999,
+      "category": "starter",
+      "description": "Great for everyday messaging and browsing needs",
+      "features": [
+        "2GB high-speed data",
+        "4G LTE network",
+        "Social media apps included",
+        "Valid for 7 days",
+        "Standard streaming quality"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Starter 3GB",
+      "dataQuota": 3,
+      "validityDays": 14,
+      "price": 24999,
+      "category": "starter",
+      "description": "Extended validity for light to moderate users",
+      "features": [
+        "3GB high-speed data",
+        "4G LTE network",
+        "All popular apps included",
+        "Valid for 14 days",
+        "HD streaming quality"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Starter 5GB",
+      "dataQuota": 5,
+      "validityDays": 14,
+      "price": 34999,
+      "category": "starter",
+      "description": "More data for two weeks of smooth browsing",
+      "features": [
+        "5GB high-speed data",
+        "4G/5G network",
+        "All apps included",
+        "Valid for 14 days",
+        "HD streaming quality"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Regular 5GB",
+      "dataQuota": 5,
+      "validityDays": 30,
+      "price": 49999,
+      "category": "regular",
+      "description": "Best value for monthly data needs",
+      "features": [
+        "5GB high-speed data",
+        "4G/5G network",
+        "All apps unlimited",
+        "Valid for 30 days",
+        "HD streaming",
+        "Bonus 1GB weekend"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Regular 8GB",
+      "dataQuota": 8,
+      "validityDays": 30,
+      "price": 69999,
+      "category": "regular",
+      "description": "Extended data for heavy users",
+      "features": [
+        "8GB high-speed data",
+        "4G/5G network",
+        "Priority network access",
+        "Valid for 30 days",
+        "Full HD streaming",
+        "Bonus 2GB weekend"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "Regular 10GB",
+      "dataQuota": 10,
+      "validityDays": 30,
+      "price": 79999,
+      "category": "regular",
+      "description": "Generous data for seamless connectivity",
+      "features": [
+        "10GB high-speed data",
+        "5G network",
+        "Priority support",
+        "Valid for 30 days",
+        "Full HD streaming",
+        "Bonus 3GB weekend"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Regular 12GB",
+      "dataQuota": 12,
+      "validityDays": 30,
+      "price": 89999,
+      "category": "regular",
+      "description": "Ample data for the whole month",
+      "features": [
+        "12GB high-speed data",
+        "5G network",
+        "Premium support",
+        "Valid for 30 days",
+        "4K streaming",
+        "Bonus 4GB weekend"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Regular 15GB",
+      "dataQuota": 15,
+      "validityDays": 30,
+      "price": 99999,
+      "category": "regular",
+      "description": "Maximum regular data with rollover",
+      "features": [
+        "15GB high-speed data",
+        "5G network",
+        "Premium priority",
+        "Valid for 30 days",
+        "4K streaming",
+        "Bonus 5GB weekend",
+        "Data rollover"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Premium 20GB",
+      "dataQuota": 20,
+      "validityDays": 30,
+      "price": 129999,
+      "category": "premium",
+      "description": "VIP experience with premium features",
+      "features": [
+        "20GB high-speed data",
+        "5G+ network",
+        "VIP support 24/7",
+        "Valid for 30 days",
+        "4K streaming",
+        "Bonus 8GB weekend",
+        "Data rollover",
+        "Free hotspot"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "Premium 25GB",
+      "dataQuota": 25,
+      "validityDays": 30,
+      "price": 149999,
+      "category": "premium",
+      "description": "More data for power users",
+      "features": [
+        "25GB high-speed data",
+        "5G+ network",
+        "VIP priority",
+        "Valid for 30 days",
+        "4K/8K streaming",
+        "Bonus 10GB weekend",
+        "Data rollover",
+        "Unlimited hotspot"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "Premium 30GB",
+      "dataQuota": 30,
+      "validityDays": 30,
+      "price": 169999,
+      "category": "premium",
+      "description": "Extensive premium data package",
+      "features": [
+        "30GB high-speed data",
+        "5G+ network",
+        "Dedicated support",
+        "Valid for 30 days",
+        "8K streaming",
+        "Bonus 12GB weekend",
+        "Data rollover",
+        "Unlimited hotspot",
+        "Cloud backup 50GB"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "Premium 40GB",
+      "dataQuota": 40,
+      "validityDays": 30,
+      "price": 199999,
+      "category": "premium",
+      "description": "Ultimate premium experience",
+      "features": [
+        "40GB high-speed data",
+        "5G+ network",
+        "Enterprise support",
+        "Valid for 30 days",
+        "8K streaming",
+        "Bonus 15GB weekend",
+        "Data rollover",
+        "Unlimited hotspot",
+        "Cloud backup 100GB",
+        "Gaming optimized"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "Premium 50GB",
+      "dataQuota": 50,
+      "validityDays": 30,
+      "price": 249999,
+      "category": "premium",
+      "description": "Maximum premium data with international roaming",
+      "features": [
+        "50GB high-speed data",
+        "5G+ network",
+        "Concierge support",
+        "Valid for 30 days",
+        "8K streaming",
+        "Bonus 20GB weekend",
+        "Data rollover",
+        "Unlimited hotspot",
+        "Cloud backup 200GB",
+        "Gaming optimized",
+        "International roaming 10 countries"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "Unlimited Lite",
+      "dataQuota": null,
+      "validityDays": 30,
+      "price": 99999,
+      "category": "unlimited",
+      "description": "Unlimited data with fair usage policy",
+      "features": [
+        "Unlimited data (1Mbps after 25GB fair use)",
+        "4G LTE network",
+        "Fair use policy 25GB high-speed",
+        "Valid for 30 days",
+        "SD streaming",
+        "Standard support"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "Unlimited Standard",
+      "dataQuota": null,
+      "validityDays": 30,
+      "price": 149999,
+      "category": "unlimited",
+      "description": "Faster unlimited with priority network",
+      "features": [
+        "Unlimited data (3Mbps after 50GB fair use)",
+        "5G network",
+        "Fair use policy 50GB high-speed",
+        "Valid for 30 days",
+        "HD streaming",
+        "Priority support",
+        "Hotspot enabled"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "Unlimited Pro",
+      "dataQuota": null,
+      "validityDays": 30,
+      "price": 199999,
+      "category": "unlimited",
+      "description": "Premium unlimited experience",
+      "features": [
+        "Unlimited data (5Mbps after 100GB fair use)",
+        "5G+ network",
+        "Fair use policy 100GB high-speed",
+        "Valid for 30 days",
+        "Full HD streaming",
+        "VIP support",
+        "Unlimited hotspot",
+        "Gaming optimized"
+      ]
+    },
+    {
+      "id": "18",
+      "name": "Weekend Special",
+      "dataQuota": 15,
+      "validityDays": 7,
+      "price": 29999,
+      "category": "special",
+      "description": "Perfect for weekend binge-watching",
+      "features": [
+        "15GB weekend data (Fri-Sun)",
+        "4G/5G network",
+        "Valid every weekend for 4 weeks",
+        "HD streaming",
+        "Perfect for weekend binge-watching"
+      ]
+    },
+    {
+      "id": "19",
+      "name": "Night Owl",
+      "dataQuota": 5,
+      "validityDays": 30,
+      "price": 49999,
+      "category": "special",
+      "description": "Unlimited night data for gamers",
+      "features": [
+        "Unlimited night data (12AM-6AM)",
+        "5G network",
+        "5GB daytime data included",
+        "Valid for 30 days",
+        "Perfect for night gamers",
+        "HD streaming"
+      ]
+    }
+  ],
+  "transactions": [
+    {
+      "id": "TXN001",
+      "customerId": 1,
+      "phoneLineId": 1,
+      "packageId": 5,
+      "amountPaid": 49999,
+      "purchaseDate": "2025-01-10T14:30:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "TXN002",
+      "customerId": 1,
+      "phoneLineId": 1,
+      "packageId": 7,
+      "amountPaid": 79999,
+      "purchaseDate": "2025-01-05T10:15:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "TXN003",
+      "customerId": 1,
+      "phoneLineId": 2,
+      "packageId": 3,
+      "amountPaid": 24999,
+      "purchaseDate": "2025-01-03T16:45:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "TXN004",
+      "customerId": 1,
+      "phoneLineId": 1,
+      "packageId": 19,
+      "amountPaid": 49999,
+      "purchaseDate": "2025-01-01T01:30:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "TXN005",
+      "customerId": 1,
+      "phoneLineId": 2,
+      "packageId": 18,
+      "amountPaid": 29999,
+      "purchaseDate": "2024-12-28T09:20:00Z",
+      "status": "completed"
+    },
+    {
+      "id": "39b7",
+      "customerId": 1,
+      "phoneLineId": 1,
+      "packageId": 5,
+      "amountPaid": 49999,
+      "status": "completed",
+      "purchaseDate": "2026-02-02T10:30:00Z"
+    },
+    {
+      "id": "1053",
+      "phoneLineId": 1,
+      "packageId": "13",
+      "amountPaid": 199999,
+      "purchaseDate": "2026-02-02T16:08:06.264Z",
+      "customerId": 1,
+      "status": "completed"
+    },
+    {
+      "id": "767d",
+      "phoneLineId": 1,
+      "packageId": "17",
+      "amountPaid": 199999,
+      "purchaseDate": "2026-02-02T16:08:34.408Z",
+      "customerId": 1,
+      "status": "completed"
+    }
+  ]
+}
